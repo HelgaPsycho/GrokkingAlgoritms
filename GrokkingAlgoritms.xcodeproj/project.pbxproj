@@ -30,6 +30,7 @@
 		9C8141822927C65100B20275 /* BinarySearch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearch.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8141832927C76F00B20275 /* SelectionSort.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SelectionSort.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8141842927CAC700B20275 /* ArraysAndLinkedLists.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ArraysAndLinkedLists.playground; path = SelectionSort.playground/ArraysAndLinkedLists.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9C814185292815E800B20275 /* Recursion.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Recursion.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8141842927CAC700B20275 /* ArraysAndLinkedLists.playground */,
+				9C814185292815E800B20275 /* Recursion.playground */,
 				9C8141812927C63700B20275 /* Big-O.playground */,
 				9C8141822927C65100B20275 /* BinarySearch.playground */,
 				9C8141832927C76F00B20275 /* SelectionSort.playground */,
