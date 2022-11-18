@@ -28,6 +28,8 @@
 		9C81417B2927C61900B20275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8141812927C63700B20275 /* Big-O.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Big-O.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8141822927C65100B20275 /* BinarySearch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearch.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9C8141832927C76F00B20275 /* SelectionSort.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SelectionSort.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9C8141842927CAC700B20275 /* ArraysAndLinkedLists.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ArraysAndLinkedLists.playground; path = SelectionSort.playground/ArraysAndLinkedLists.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +46,10 @@
 		9C81415F2927C61800B20275 = {
 			isa = PBXGroup;
 			children = (
+				9C8141842927CAC700B20275 /* ArraysAndLinkedLists.playground */,
 				9C8141812927C63700B20275 /* Big-O.playground */,
 				9C8141822927C65100B20275 /* BinarySearch.playground */,
+				9C8141832927C76F00B20275 /* SelectionSort.playground */,
 				9C81416A2927C61800B20275 /* GrokkingAlgoritms */,
 				9C8141692927C61800B20275 /* Products */,
 			);
