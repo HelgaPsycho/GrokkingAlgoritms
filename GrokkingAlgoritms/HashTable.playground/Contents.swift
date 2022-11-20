@@ -49,3 +49,15 @@
  Плохая хэш-функциясозлает скопления и порождает множество колллизий
  
  */
+var dictionary = [String: Int]()
+
+dictionary["apple"] = 3
+dictionary["avocado"] = 8
+dictionary["banana"] = 6
+
+print(dictionary)
+
+print(dictionary.hashValue)
+
+print(dictionary["apple"])
+
