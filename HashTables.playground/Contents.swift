@@ -59,5 +59,5 @@ print(dictionary)
 
 print(dictionary.hashValue)
 
-print(dictionary["apple"])
+print(dictionary["apple"] as Any)
 
