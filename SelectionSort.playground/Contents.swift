@@ -60,3 +60,4 @@ func selectionSort <T: Comparable> (array: inout [T]) {
 
 selectionSort(array: &array)
 print(array)
+
