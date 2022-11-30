@@ -64,57 +64,6 @@ graph["Tom"] = []
 
 */
 
-//struct Friend: Hashable {
-//    let isSellerOfMango: Bool
-//
-//    init(){
-//        self.isSellerOfMango = false
-//    }
-//
-//    init(isSellerOfMango: Bool){
-//        self.isSellerOfMango = isSellerOfMango
-//    }
-//
-//
-//}
-//
-//let iAm = Friend()
-//let alice = Friend()
-//let bob = Friend()
-//let peggi = Friend()
-//let anudge = Friend()
-//let clar = Friend()
-//let jonny = Friend(isSellerOfMango: true)
-//let tom = Friend()
-//
-//var newGraph = [Friend: [Friend]]()
-//newGraph[iAm] = [alice, bob, clar]
-//newGraph[alice] = [peggi]
-//newGraph[bob] = [peggi, anudge]
-//newGraph[clar] = [tom, jonny]
-////newGraph[anudge] = []
-////newGraph[peggi] = []
-////newGraph[jonny] = []
-////newGraph[tom] = []
-//
-//print(newGraph)
-//
-//var queue: [Friend] = newGraph[iAm]!
-//
-//print(queue)
-//
-//while queue.isEmpty == false {
-//    if queue[0].isSellerOfMango {
-//        print ("\(queue[0]) is seller of mango")
-//
-//    } else {
-//        queue.append(contentsOf: newGraph[queue[0]]!)
-//        queue.dropFirst()
-//    }
-//}
-//
-//
-
 class Man {
     let name: String
     let isSellerOfAvocado: Bool
@@ -161,4 +110,53 @@ var queue: [Man] = you.friends //1. Создать очередь с имена�
     }
 
 
+//типы ребер
+public enum EdgeType {
+    //направленные
+    case directed
+    //ненаправленные
+    case undirected
+}
 
+public struct Vertex<T> {
+    public let index: Int
+    public let data: T
+}
+
+extension Vertex: Hashable where T: Hashable {}
+extension Vertex: Equatable where T: Equatable{}
+
+extension Vertex: CustomStringConvertible {
+    public var description: String {
+        "\(index): \(data)"
+    }
+}
+
+public struct Edge<T> {
+    public let sourse: Vertex<T>
+    public let destination: Vertex<T>
+    public let weight: Double?
+}
+
+public protocol Graph {
+    
+    associatedtype Element
+    
+    func createVertex(data: Element) -> Vertex<Element>
+    func addDirectedEdge(from sourse: Vertex<Element>,
+                         to destination: Vertex<Element>,
+                         weight: Double?)
+    func addUndirectedEdge(between source: Vertex<Element>,
+                           and destination: Vertex<Element>,
+                           weight: Double?)
+    func add(_edge: EdgeType,
+             from sourse: Vertex<Element>,
+             to destination: Vertex<Element>,
+             weight: Double?)
+    func edges(from sourse: Vertex<Element>)-> [Edge<Element>]
+    func weight(from sourse: Vertex<Element>, to destination: Vertex<Element>)->Double
+}
+
+    //Имплементировать граф можно с помощью списка либо матрицы
+
+//ADJACENCY LIST
