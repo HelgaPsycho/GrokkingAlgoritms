@@ -15,6 +15,8 @@
  <li><a href="https://github.com/HelgaPsycho/GrokkingAlgoritms/blob/main/QuickSort.playground/Contents.swift"> Быстрая сортировка</a></li>
  <li><a href="https://github.com/HelgaPsycho/GrokkingAlgoritms/blob/main/HashTables.playground/Contents.swift"> Хэш таблицы </a></li>
  <li><a href="https://github.com/HelgaPsycho/GrokkingAlgoritms/blob/main/Graphs.playground/Contents.swift"> Графы </a></li>
+  <li><a href="https://github.com/HelgaPsycho/GrokkingAlgoritms/blob/main/GraphByDictionary.playground/Contents.swift">Реализация графа через словарь </a></li>
+   <li><a href="https://github.com/HelgaPsycho/GrokkingAlgoritms/blob/main/GraphByMatrix.playground/Contents.swift">Реализация графа через матрицу</a></li>
  <li><a href="https://github.com/HelgaPsycho/GrokkingAlgoritms/blob/main/DijkstrasAlgorithm.playground/Contents.swift"> Алгоритм Дейкстры </a></li>
  <li><a href="">  </a></li>
 </ol>
