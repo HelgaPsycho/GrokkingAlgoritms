@@ -35,6 +35,7 @@
 		9C8AAA46292A61E600536CE4 /* HashTables.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HashTables.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CC4DB00292FF29300C35B4C /* DijkstrasAlgorithm.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DijkstrasAlgorithm.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9CC4DB032938EB1700C35B4C /* GraphByDictionary.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GraphByDictionary.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9CC4DB042938EC5500C35B4C /* GraphByMatrix.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GraphByMatrix.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		9C81415F2927C61800B20275 = {
 			isa = PBXGroup;
 			children = (
+				9CC4DB042938EC5500C35B4C /* GraphByMatrix.playground */,
 				9CC4DB032938EB1700C35B4C /* GraphByDictionary.playground */,
 				9CC4DB00292FF29300C35B4C /* DijkstrasAlgorithm.playground */,
 				9C8AAA46292A61E600536CE4 /* HashTables.playground */,
