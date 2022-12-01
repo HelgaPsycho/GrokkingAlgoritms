@@ -149,7 +149,7 @@ public protocol Graph {
     func addUndirectedEdge(between source: Vertex<Element>,
                            and destination: Vertex<Element>,
                            weight: Double?)
-    func add(_edge: EdgeType,
+    func add(_ edge: EdgeType,
              from sourse: Vertex<Element>,
              to destination: Vertex<Element>,
              weight: Double?)
@@ -160,3 +160,74 @@ public protocol Graph {
     //Имплементировать граф можно с помощью списка либо матрицы
 
 //ADJACENCY LIST
+//для каждого узла графа граф храф хранит список ребер
+//узел - ключ словаря, массив из ребер - значение словаря
+/*
+ ---------------------------------------------------------------
+ Vertices       |  Adjacency list
+ ---------------------------------------------------------------
+ Singapore     ->  Tokyo  Hong Kong
+ Hong Kong     ->  Tokyo  Singapore  Tokyo  San Francisco
+ Tokyo         ->  Singapore  Detroit  Detroit  Washington DC
+ Detroit       ->  Tokyo
+ Washington DC ->  Tokyo San Francisco
+ San Francisco ->  Hong Kong  Washington DC
+ ----------------------------------------------------------------
+ */
+
+
+
+public class AdjacencyList<T: Hashable>: Graph {
+   
+    private var adjacencies: [Vertex<T>: [Edge<T>]] = [:]
+
+    public init() {}
+
+    public func createVertex(data: T) -> Vertex<T> {
+        let vertex = Vertex(index: adjacencies.count, data: data)
+        adjacencies[vertex] = []
+        return vertex
+    }
+    // protocol Graph
+
+    public func addDirectedEdge(from sourse: Vertex<T>,
+                         to destination: Vertex<T>,
+                         weight: Double?) {
+        let edge = Edge(sourse: sourse, destination: destination, weight: weight)
+        adjacencies[sourse]?.append(edge)
+    }
+    
+    public func edges(from sourse: Vertex<T>) -> [Edge<T>] {
+        adjacencies[sourse] ?? []
+        //возвращает массив из ребер, которые принадлежат данному узлу, либо пустой массив, если такой узел не известен
+        
+    }
+    
+    public func weight(from sourse: Vertex<T>, to destination: Vertex<T>) -> Double {
+        return 2
+    }
+    
+
+}
+
+extension Graph {
+    public func addUndirectedEdge(between source: Vertex<Element>,
+                                  and destination: Vertex<Element>,
+                                  weight: Double?){
+        addDirectedEdge(from: source, to: destination, weight: weight)
+        addDirectedEdge(from: destination, to: source, weight: weight)
+        
+    }
+    
+    
+    public func add(_ edge: EdgeType, from sourse: Vertex<Element>, to destination: Vertex<Element>, weight: Double?) {
+        switch edge {
+        case .directed:
+            addDirectedEdge(from: sourse, to: destination, weight: weight)
+        case .undirected:
+            addUndirectedEdge(between: sourse, and: destination, weight: weight)
+            
+        }
+        
+    }
+}
